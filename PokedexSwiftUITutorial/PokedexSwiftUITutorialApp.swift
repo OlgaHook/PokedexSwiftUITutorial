@@ -11,7 +11,8 @@ import SwiftUI
 struct PokedexSwiftUITutorialApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //replace  ContentView() ->
+            PokedexView()
         }
     }
 }
