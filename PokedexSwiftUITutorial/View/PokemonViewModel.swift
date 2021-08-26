@@ -36,14 +36,15 @@ class PokemonViewModel: ObservableObject {
     func backgrounColor(forType type: String) -> UIColor{
         switch type {
         case "fire": return .systemRed
-        case "poison": return .systemGreen
+        case "poison": return .systemGray
         case "water": return .systemTeal
         case "electric": return .systemYellow
         case "psychic": return .systemPurple
         case "normal": return .systemOrange
-        case "groung": return .systemGray
+        case "groung": return .systemGray2
         case "flying": return .systemBlue
         case "fairy": return .systemPink
+        case "grass":return .systemGreen
         default:return .systemIndigo
 
         }
