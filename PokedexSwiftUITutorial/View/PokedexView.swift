@@ -10,7 +10,7 @@ import SwiftUI
 struct PokedexView: View {
     //Thiss tels to our VGrid, that we need only 2 Items in a row
     private let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
-    //create a ViewModel
+    //create a ViewModel. We created class PokemonViewModel: ObservableObject -> so use @ObservedObject
    @ObservedObject  var viewModel = PokemonViewModel()
     
     var body: some View {

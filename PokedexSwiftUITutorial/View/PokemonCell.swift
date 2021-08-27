@@ -13,6 +13,14 @@ struct PokemonCell: View {
     let pokemon: Pokemon
     //to get acces to viewModel
     let viewModel: PokemonViewModel
+    let bacgroundColor: Color
+    
+    init(pokemon: Pokemon, viewModel: PokemonViewModel){
+        self.pokemon = pokemon
+        self.viewModel = viewModel
+        self.bacgroundColor = Color(viewModel.backgrounColor(forType: pokemon.type))    }
+    
+    
     var body: some View {
         //inside ZStack -> put VStack.Click on TEXT, hold CMD-> choose "Embed in VStack" Works only if Canvas is Open
         ZStack{
@@ -48,9 +56,9 @@ struct PokemonCell: View {
             }
         }
         //set background color Cell color
-        .background(Color(viewModel.backgrounColor(forType: pokemon.type)))
+        .background(bacgroundColor)
         .cornerRadius(12)
-        .shadow(color: .green, radius: 6, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 0.0)
+        .shadow(color: bacgroundColor, radius: 6, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 0.0)
         
     }
 }
